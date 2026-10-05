@@ -1,0 +1,25 @@
+body {
+    background-color: #F0F2F5;
+    font-family: Poppins;
+}
+
+nav {
+    background-color: #FFFFFF;
+    display: flex;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+    gap: 20px
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
