@@ -1,69 +1,57 @@
-´
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <title>Fitlife - IMC</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>FitLife - IMC</title>
 </head>
 
-<body style="font-family: Poppins">
+<body>
     <nav>
-        <a href="../index.html">Fitlife</a>
+        <a href="../index.html" id="logo"><i class="fas fa-heartbeat" aria-hidden="true"></i> FitLife</a>
 
-        <ul>
-            <li> <a href="../index.html">Home</a> </li>
-            <li> <a href="./imc.html">IMC</a> </li>
-            <li> <a href="./tmb.html">TMB</a> </li>
-            <li> <a href="./water.html">Água</a> </li>
+        <ul class="nav-links">
+            <li> <a class="nav-link" href="../index.html">Home</a> </li>
+            <li> <a class="nav-link active" aria-current="page" href="./imc.html">IMC</a> </li>
+            <li> <a class="nav-link" href="./tmb.html">TMB</a> </li>
+            <li> <a class="nav-link" href="./water.html">Água</a> </li>
         </ul>
     </nav>
 
-    <main>
-        <section>
-            <h3>IMC</h3>
+    <header class="header-container">
+        <h1><span><i class="fas fa-weight" aria-hidden="true"></i></span> Calculadora IMC</h1>
+        <p>Informe seu peso e sua altura.</p>
+    </header>
 
-            <p>Em breve você irá calcular o IMC aqui</p>
+    <main class="tool-main">
+        <section class="tool-card">
 
-            <form action="">
 
-                <div>
-                    <label for="">Peso (Kg)</label>
-                    <input type="number" placeholder="Ex: 70" id="weight">
+            <form class="calculator-form">
+
+                <div class="form-field">
+                    <label for="weight">Peso (Kg)</label>
+                    <input type="number" placeholder="Ex: 70" id="weight" name="weight" min="0.1" step="0.1" required>
                 </div>
 
-                <div>
-                    <label for="">Altura (m)</label>
-                    <input type="number" placeholder="Ex: 1.70" id="height">
+                <div class="form-field">
+                    <label for="height">Altura (m)</label>
+                    <input type="number" placeholder="Ex: 1.70" id="height" name="height" min="0.01" step="0.01" required>
                 </div>
 
-                <button type="Calcular">Calcular</button>
-
-                <!--             <form action="" method="get"> 
-
-                <label for="user-input">Digite seu nome</label>
-                <input type="text" placeholder="Coloque seu nome" id="user-input"> 
-
-                <label for="course-input">Escolha o seu curso</label>
-                <select name="course-input" ids="course-input">
-                    <option value=""></option>
-                    <option value=ads">Análise e desenvolvimento de sistemas</option>
-                    <option value="es">Eng. de Software</option>
-                    <option value="adm">Administração</option>
-                    <option value="ci">Ciências da computação</option>
-                </select>
-            
-                <button type="submit">Enviar</button> -->
+                <button class="primary-button" type="submit">Calcular</button>
 
             </form>
 
-            <div>
+            <div class="result-panel">
 
                 <p>Seu IMC é: </p>
                 <p>00.0 </p>
@@ -71,13 +59,9 @@
 
             </div>
 
-            <a href="../index.html">Voltar</a>
+            <a class="back-link" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar à home</a>
         </section>
     </main>
-
-    <footer>
-        <p>©2026 Fitlife</p>
-    </footer>
 
 </body>
 

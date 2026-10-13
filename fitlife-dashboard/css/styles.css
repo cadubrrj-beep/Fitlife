@@ -6,7 +6,7 @@
 
 body {
     background-color: #F0F2F5;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     color: #333;
 }
 
@@ -66,7 +66,7 @@ nav {
 }
 
 main {
-    width: 800px;
+    width: min(800px, calc(100% - 40px));
     margin: 0 auto;
 }
 
@@ -100,4 +100,94 @@ main {
     font-size: 48px;
     color: #00b894;
     margin-bottom: 16px;
+}
+
+.tool-main { 
+    max-width: 600px; 
+}
+
+.tool-card { 
+    background: #fff; padding: 32px; border-radius: 10px; box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05); 
+}
+
+.calculator-form { 
+    display: grid; gap: 20px; 
+}
+
+.form-field { 
+    display: grid; gap: 8px; 
+}
+
+.form-field label { 
+    font-weight: 500; 
+}
+
+input, select, button { 
+    font: inherit; 
+}
+
+.form-field input, .form-field select { 
+    width: 100%; padding: 12px; border: 1px solid #dfe6e9; border-radius: 6px; background: #fff; color: #333; 
+}
+
+.primary-button, .secondary-button { 
+    padding: 12px 20px; border-radius: 6px; cursor: pointer; border: 1px solid #00b894; transition: 0.2s; 
+}
+
+.primary-button { 
+    background: #00b894; color: #fff; 
+}
+
+.primary-button:hover { 
+    background: #009f80; 
+}
+
+.secondary-button { 
+    background: #fff; color: #00866c; 
+}
+
+.secondary-button:hover { 
+    background: #e8f8f3; 
+}
+
+.button-group { 
+    display: flex; gap: 12px; margin-top: 20px; 
+}
+
+.result-panel { 
+    margin: 24px 0; padding: 20px; border-radius: 6px; background: #e8f8f3; text-align: center; 
+}
+
+.result-panel p + p { 
+    margin-top: 8px; 
+}
+
+progress { 
+    display: block; width: 100%; height: 16px; margin-top: 12px; accent-color: #00b894; 
+}
+
+.back-link { 
+    display: inline-block; margin-top: 20px; color: #00866c; text-decoration: none; 
+}
+
+.back-link:hover { 
+    text-decoration: underline; 
+}
+
+footer { 
+    text-align: center; padding: 32px 20px; color: #636e72; font-size: 14px; 
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { 
+    outline: 3px solid #00866c; outline-offset: 4px; 
+}
+
+@media (max-width: 600px) {
+    nav { height: auto; min-height: 80px; padding: 20px; flex-wrap: wrap; gap: 16px; }
+    .nav-links { gap: 20px; flex-wrap: wrap; }
+    .header-container { padding: 32px 20px; }
+    .header-container h1 { font-size: 28px; }
+    .cards-section { flex-direction: column; }
+    .tool-card { padding: 24px; }
+    .button-group { flex-wrap: wrap; }
 }
