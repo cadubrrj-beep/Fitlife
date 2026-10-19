@@ -4,10 +4,23 @@
    box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #00b894;
+    --primary-dark: #019477;
+    --secondary-color: #2d3436;
+    --background-color: #f0f2f5;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --muted-color: #636e72;
+    --danger-color: #d63031;
+    --water-color: #0984e3;
+    --border-color: #dfe6e9;
+}
+
 body {
-    background-color: #F0F2F5;
+    background-color: var(--background-color);
     font-family: Poppins, sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
 
 nav {
@@ -15,15 +28,15 @@ nav {
     justify-content: space-between; /* tag a tendo espaçamento da tag ul */
     align-items: center; /* centraliza itens da vertical */
 
-    padding: 0 80px;
+    padding: 0 5rem;
 
-    background-color: #fff;
-    height: 80px;
+    background-color: var(--background-color);
+    height: 5rem;
 }
 
 #logo {
-    font-size: 24px;
-    color: #00b894;
+    font-size: 1.5rem;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
 }
@@ -31,24 +44,24 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap: 1.5rem;
 }
 
 .nav-link {
     text-decoration: none;
     color: #2d3436;
-    font-size: 16px;
+    font-size: 1rem;
 
     transition: 0.2s;
 }
 
 .nav-link:hover {
-    color: #00b894
+    color: var(--primary-color);
 }
 
 .nav-link.active {
-    border-bottom: 3px #00b894 solid;
-    color: #00b894
+    border-bottom: 3px var(--primary-color) solid;
+    color: var(--primary-color);
 }
 
 .header-container {
@@ -58,28 +71,31 @@ nav {
 }
 
 .header-container h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .header-container span {
-    color: #00b894;
+    color: var(--primary-color);
 }
 
 main {
-    width: min(800px, calc(100% - 40px));
+    /* width: min(800px, calc(100% - 40px)); */
+    width: 60vw
     margin: 0 auto;
+
+    
 }
 
 .cards-section {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
     text-align: center;
 }
 
 .card {
-    background-color: #fff;
-    color: #333;
-    padding: 24px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
@@ -92,13 +108,13 @@ main {
 }
 
 .card:hover {
-    border: 2px solid #00b894;
-    color: #00b894;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .card i {
-    font-size: 48px;
-    color: #00b894;
+    font-size: 3rem;
+    color: var(--primary-color);
     margin-bottom: 16px;
 }
 
@@ -107,7 +123,7 @@ main {
 }
 
 .tool-card { 
-    background: #fff; padding: 32px; border-radius: 10px; box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05); 
+    background: var(--primary-color); padding: 32px; border-radius: 10px; box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05); 
 }
 
 .calculator-form { 
@@ -127,27 +143,27 @@ input, select, button {
 }
 
 .form-field input, .form-field select { 
-    width: 100%; padding: 12px; border: 1px solid #dfe6e9; border-radius: 6px; background: #fff; color: #333; 
+    width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--background-color); color: var(--text-color); 
 }
 
 .primary-button, .secondary-button { 
-    padding: 12px 20px; border-radius: 6px; cursor: pointer; border: 1px solid #00b894; transition: 0.2s; 
+    padding: 12px 20px; border-radius: 6px; cursor: pointer; border: 1px solid var(--primary-color); transition: 0.2s; 
 }
 
 .primary-button { 
-    background: #00b894; color: #fff; 
+    background: var(--primary-color); color: var(--background-color); 
 }
 
 .primary-button:hover { 
-    background: #009f80; 
+    background: var(--primary-dark); 
 }
 
 .secondary-button { 
-    background: #fff; color: #00866c; 
+    background: var(--background-color); color: var(--primary-dark); 
 }
 
 .secondary-button:hover { 
-    background: #e8f8f3; 
+    background: var(--background-color); 
 }
 
 .button-group { 
@@ -155,7 +171,7 @@ input, select, button {
 }
 
 .result-panel { 
-    margin: 24px 0; padding: 20px; border-radius: 6px; background: #e8f8f3; text-align: center; 
+    margin: 24px 0; padding: 20px; border-radius: 6px; background: var(--background-color); text-align: center; 
 }
 
 .result-panel p + p { 
@@ -163,11 +179,11 @@ input, select, button {
 }
 
 progress { 
-    display: block; width: 100%; height: 16px; margin-top: 12px; accent-color: #00b894; 
+    display: block; width: 100%; height: 16px; margin-top: 12px; accent-color: var(--primary-color); 
 }
 
 .back-link { 
-    display: inline-block; margin-top: 20px; color: #00866c; text-decoration: none; 
+    display: inline-block; margin-top: 20px; color: var(--primary-dark); text-decoration: none; 
 }
 
 .back-link:hover { 
@@ -175,11 +191,11 @@ progress {
 }
 
 footer { 
-    text-align: center; padding: 32px 20px; color: #636e72; font-size: 14px; 
+    text-align: center; padding: 32px 20px; color: var(--muted-color); font-size: 14px; 
 }
 
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { 
-    outline: 3px solid #00866c; outline-offset: 4px; 
+    outline: 3px solid var(--primary-color); outline-offset: 4px; 
 }
 
 @media (max-width: 600px) {
