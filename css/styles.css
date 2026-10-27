@@ -131,7 +131,7 @@ main {
 .tool-container {
     display: flex;
     flex-direction: column;
-    
+
     gap: 1rem;
 
     width: 100%;
@@ -168,7 +168,8 @@ main {
     color: var(--secondary-color);
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
     padding: 0.8rem;
     border: 2px solid var(--border-color);
     border-radius: 5px;
@@ -179,4 +180,45 @@ main {
 .form-group input:focus {
     outline: none;
     border-color: var(--primary-color);
+}
+
+
+.action-btn {
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transform: 0.3s;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-back {
+    background-color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background-color: var(--text-color);
+}
+
+.result-box {
+    margin-top: 1.8rem;
+    padding: 1rem;
+    background-color: #e8f8f5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 490px) {
+    nav {
+        flex-direction: column;
+    }
 }

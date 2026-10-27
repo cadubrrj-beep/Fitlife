@@ -1,78 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>FitLife - Taxa metabólica basal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <title>FitLife - TMB</title>
 </head>
 
 <body>
-
     <nav>
-        <a href="../index.html" id="logo"><i class="fas fa-heartbeat" aria-hidden="true"></i> FitLife</a>
+        <a href="../index.html" id="logo">
+            <i class="fas fa-heartbeat"></i>
+            FitLife
+        </a>
 
         <ul class="nav-links">
-            <li> <a class="nav-link" href="../index.html">Home</a> </li>
-            <li> <a class="nav-link" href="./imc.html">IMC</a> </li>
-            <li> <a class="nav-link active" aria-current="page" href="./tmb.html">TMB</a> </li>
-            <li> <a class="nav-link" href="./water.html">Água</a> </li>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="./imc.html" class="nav-link">IMC</a></li>
+            <li><a href="./tmb.html" class="nav-link active">TMB</a></li>
+            <li><a href="./water.html" class="nav-link">Água</a></li>
         </ul>
     </nav>
 
-    <header class="header-container">
-        <h1><span><i class="fas fa-fire" aria-hidden="true"></i></span> Taxa Metabólica Basal</h1>
-        <p>Informe seus dados para calcular o gasto calórico basal.</p>
-    </header>
+    <main>
+        <section class="tool-container">
+            <div class="tool-container-title">
+                <h2><i class="fas fa-fire"></i> Cálculo de TMB</h2>
+            </div>
 
-    <main class="tool-main">
-        <section class="tool-card">
-            <form class="calculator-form">
-
-                <div class="form-field">
-                    <label for="gender">Gêneros</label>
+            <form action="">
+                <div class="form-group">
+                    <label for="gender">Gênero</label>
                     <select name="gender" id="gender">
                         <option value="female">Feminino</option>
                         <option value="male">Masculino</option>
                     </select>
                 </div>
 
-                <div class="form-field">
+                <div class="form-group">
                     <label for="height">Altura (cm)</label>
-                    <input type="number" id="height" name="height" min="0.01" step="0.01" required placeholder="Ex: 175">
+                    <input type="number" id="height" placeholder="Ex: 175" />
                 </div>
 
-                <div class="form-field">
+                <div class="form-group">
                     <label for="weight">Peso (kg)</label>
-                    <input type="number" id="weight" name="weight" min="0.1" step="0.1" required placeholder="Ex: 70">
+                    <input type="number" id="weight" placeholder="Ex: 70" />
                 </div>
 
-                <div class="form-field">
+                <div class="form-group">
                     <label for="age">Idade (anos)</label>
-                    <input type="number" name="age" id="age" placeholder="Ex: 18" min="1" step="1">
+                    <input type="number" id="age" placeholder="18" />
                 </div>
 
-                <button class="primary-button" type="submit">Calcular calorias</button>
-
+                <button class="action-btn">Calcular calorias</button>
+                <a class="action-btn btn-back" href="../index.html">Voltar</a>
             </form>
 
-            <div class="result-panel">
+            <div class="result-box">
                 <p>Gasto calórico basal:</p>
                 <p>0000</p>
                 <p>Kcal/dia</p>
             </div>
-
-            <a class="back-link" href="../index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar à home</a>
         </section>
     </main>
 
+    <footer>
+        <p>© 2026 FitLife</p>
+    </footer>
 </body>
 
 </html>
